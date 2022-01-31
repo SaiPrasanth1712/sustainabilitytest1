@@ -1,0 +1,35 @@
+body{
+	margin: 0;
+	padding: 30px;
+	font-family: sans-serif;
+}
+*{
+	box-sizing: border-box;
+}
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table td {
+	padding: 12px 15px;
+	border: 2px solid #ddd;
+	text-align: center;
+	font-size: 17px;
+}
+.table td.a{
+	text-align: left;
+}
+.pagination {
+    justify-content:center;
+}
+.text{
+	width: 65em;
+}
+.table td.strong{
+	font-size: 30px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,91 @@
+body{
+    position: relative;
+    margin: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(250, 250, 250);
+}
+
+h1{
+    text-align: center;
+}
+h2 {
+ font-family: arial;
+}
+#border{
+    border: 1px solid black;
+}
+.yellow{
+    background-color: yellow;
+    width: 890px;
+    margin-bottom: 0px;
+}
+.purple{
+    background-color: rgb(204, 140, 204);
+    width: 550px;
+    margin-bottom: 0px;
+}
+.white{
+    margin-bottom: 0px;
+}
+.blue{
+    background-color: rgb(135, 160, 210);
+    width: 770px;
+     margin-bottom: 0px;
+}
+
+.navbar2 {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+.navbar2 a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+
+}
+.navbar2 a.left {
+  float: left;
+}
+
+.navbar2 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.navbar2 a.active {
+  background-color: #666;
+  float: right;
+  color: white;
+}
+.footer{
+    text-align: center;
+    color: whitesmoke;
+    background-color: black;
+    font-size: 80%;
+    margin-right: 0px;
+}
+.fot{
+    background-color: white;
+}
+.reg{
+    text-align: center;
+}
+.reg a {
+    border: 1px solid blue;
+    padding: 10px;
+}
+.reg a:hover {
+  background-color: blue;
+  color: white;
+}
+
+#div1{
+    text-align: center;
+    color: skyblue;
+}
