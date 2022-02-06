@@ -62,8 +62,8 @@ h2{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
-  color: white;
+  background-color: whitesmoke;
+  color: black;
 }
 
 
@@ -87,4 +87,20 @@ background-color:whitesmoke;
 	float: left;
 	width: 60%;
 	padding: 50px;
+}
+
+#colorpur{
+	background-color: rgba(82, 35, 100, 0.25);
+}
+
+#colorgre{
+	background-color: rgba(6, 102, 35, 0.25);
+}
+
+#colorblue{
+	background-color: rgba(39, 70, 132, 0.27);
+}
+
+#colordblue{
+	background-color: rgba(39, 70, 132, 0.6);
 }

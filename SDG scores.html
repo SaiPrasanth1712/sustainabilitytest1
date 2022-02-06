@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="SDG scores.css">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 </head>
 <body onload="sdg()">
 <nav class="navbar navbar-light bg-light">
@@ -22,13 +23,15 @@
 <p class="para1">ESG Scores are mapped to their most closely-related, primary SDGs to generate scores on the SDGs.</p>
 <div class="performanceScores">
   <h2>SDG Performance Scores</h2>
+  <canvas id="myChart" width="350" height="100"></canvas>
 </div>
 <div class="summaryScores">
   <h2>Summary Scores</h2>
+  <canvas id="myOverallChart" width="10" height="2"></canvas>
 </div>
 
-<div class="table1">
-  <h2>Overall Scores</h2>
+<div class="clearfix">
+<div class="box">
 <table id="overallScores">
   <tr>
 
@@ -37,86 +40,86 @@
   </tr>
   <tr>
 
-    <td>No Poverty</td>
+    <td id="colornp">No Poverty</td>
     <td id="sdgg67a"></td>
   </tr>
   <tr>
 
-    <td>Zero hunger</td>
+    <td id="colorzh">Zero hunger</td>
     <td id="sdgh67a"></td>
   </tr>
   <tr>
 
-    <td>Good health and wellbeing</td>
+    <td id="colorghw">Good health and wellbeing</td>
     <td id="sdgi67a"></td>
   </tr>
   <tr>
-    <td>Quality education</td>
+    <td id="colorqe">Quality education</td>
     <td id="sdgk67a"></td>
   </tr>
   <tr>
 
-    <td>Gender equality</td>
+    <td id="colorge">Gender equality</td>
     <td id="sdgj67a"></td>
   </tr>
   <tr>
 
-    <td>Clean water and sanitation</td>
+    <td id="colorcws">Clean water and sanitation</td>
     <td id="sdgi58a"></td>
   </tr>
   <tr>
 
-    <td>Affordable and clean energy</td>
+    <td id="colorace">Affordable and clean energy</td>
     <td id="sdgg58a"></td>
   </tr>
   <tr>
 
-    <td>Decent work and economic growth </td>
+    <td id="colordweg">Decent work and economic growth </td>
     <td id="sdgl67a"></td>
   </tr>
 
   <tr>
-    <td>Industry innovation and infrastructure</td>
+    <td id="coloriii">Industry innovation and infrastructure</td>
     <td id="sdgg73a"></td>
   </tr>
 
   <tr>
-    <td>Reduced inequalities</td>
+    <td id="colorri">Reduced inequalities</td>
     <td id="sdgh73a"></td>
   </tr>
 
    <tr>
-    <td>Sustainable cities and communities</td>
+    <td id="colorscc">Sustainable cities and communities</td>
     <td id="sdgi73a"></td>
   </tr>
 
    <tr>
-    <td>Responsible consumption and production</td>
+    <td id="colorrcp">Responsible consumption and production</td>
     <td id="sdgj58a"></td>
   </tr>
 
    <tr>
-    <td>Climate action</td>
+    <td id="colorca">Climate action</td>
     <td id="sdgh58a"></td>
   </tr>
 
    <tr>
-    <td>Life below water</td>
+    <td id="colorlbw">Life below water</td>
     <td id="sdgk58a"></td>
   </tr>
 
    <tr>
-    <td>Life on land</td>
+    <td id="colorlol">Life on land</td>
     <td id="sdgl58a"></td>
   </tr>
 
    <tr>
-    <td >Peace, justice and stong institutions</td>
+    <td id="colorpjsi">Peace, justice and strong institutions</td>
     <td id="sdgj73a"></td>
   </tr>
 
   <tr>
-    <td >Patnerships for the goals</td>
+    <td id="colorpg">Patnerships for the goals</td>
     <td id="sdgk73a"></td>
   </tr>
 
@@ -126,7 +129,7 @@
   </tr>
 
    <tr>
-    <td >+ Positive impacts bonus</td>
+    <td id="colorpi">+ Positive impacts bonus</td>
     <td id="esge25a"></td>
   </tr>
 
@@ -136,27 +139,40 @@
   </tr>
 </table>
 </div>
+<div class="box1">
+    <h2>Meaning of % Progress Scores</h2><br>
+  <p><100%: How far the organization is on its journey toward not working against that SDG .<br>  
+ 100%: The organization is breaking even on that SDG - It's not working against it.<br>
+>100%: The organization is being restorative / regenerative / net positive on the SDG, directly or indirectly, overall.</p><br><br><br><br><br><br>
 
+<h2>Graphical Representations</h2><br><br>
+<p>"The bar charts above illustrate the kind of graphical representations that make presentations / reports more effective and facilitate prioritizing sustainability issues for improvement. The bar charts are generated in real time, based on the scores in the adjacent table. <br><br>
+
+Users are encouraged to transcribe the scores into their own separate Excel worksheet, or into a different preferred graphics software package, to generate other kinds of charts (e.g. column, radar, or pie charts), dashboards, and / or line charts that show trends in their organization's performance on high-focus issues compared to previous years, if that information is available."                
+</p><br>
+  </div>
+  </div>
+</div><br>
 <div class="table2">
-  <h2>Mapping of ESG Scores to SDGs</h2>
+  <h2 id="colorpi">Mapping of ESG Scores to SDGs</h2>
   <p>Scores on ESG issues are proxies for scores on aligned SDGs. These tables show how ESG scores are mapped to their primary SDGs. Governance scores are always factored in, to reinforce that improving governance improves everything.</p><br>
 <table id="mappingESG">
   <tr>
-    <th colspan="8">Environment-related SDGs</th>
+    <th id="colorgre" colspan="8" >Environment-related SDGs</th>
   </tr>
   <tr>
     <th>Core ESG Issues</th>
     <th>Esg Scores</th>
-    <th>7 Affordable and clean energy</th>
-    <th>13 Climate action</th>
-    <th>6 Clean water and sanitation</th>
-    <th>12 Responsible consumption and production</th>
-    <th>14 Life below water</th>
-    <th>15 Life on land</th>
+    <th id="colorace">7 Affordable and clean energy</th>
+    <th id="colorca">13 Climate action</th>
+    <th id="colorcws">6 Clean water and sanitation</th>
+    <th id="colorrcp">12 Responsible consumption and production</th>
+    <th id="colorlbw">14 Life below water</th>
+    <th id="colorlol">15 Life on land</th>
   </tr>
   <tr>
 
-    <td>Governance</td>
+    <td id="colorpi">Governance</td>
     <td id="esge11a"></td>
     <td id="esge40a"></td>
     <td id="esge41a"></td>
@@ -167,7 +183,7 @@
   </tr>
   <tr>
 
-    <td>Energy</td>
+    <td id="colorgre">Energy</td>
     <td id="energy1"></td>
     <td id="energy2"></td>
     <td ></td>
@@ -179,7 +195,7 @@
   </tr>
   <tr>
 
-    <td>GHG Emissions</td>
+    <td id="colorgre">GHG Emissions</td>
     <td id="ghg1"></td>
     <td ></td>
     <td id="ghg2"></td>
@@ -189,7 +205,7 @@
     <td id="ghg4"></td>
   </tr>
   <tr>
-    <td>Water</td>
+    <td id="colorgre">Water</td>
     <td id="water1"></td>
     <td ></td>
     <td ></td>
@@ -200,7 +216,7 @@
   </tr>
   <tr>
 
-    <td>Procurement</td>
+    <td id="colorgre">Procurement</td>
     <td id="procurement1"></td>
     <td ></td>
     <td ></td>
@@ -211,7 +227,7 @@
   </tr>
   <tr>
 
-    <td>Non-GHG emissions</td>
+    <td id="colorgre">Non-GHG emissions</td>
     <td id="nghg1"></td>
     <td ></td>
     <td ></td>
@@ -222,7 +238,7 @@
   </tr>
   <tr>
 
-    <td>Waste</td>
+    <td id="colorgre">Waste</td>
     <td id="waste1"></td>
     <td ></td>
     <td ></td>
@@ -233,7 +249,7 @@
   </tr>
   <tr>
 
-    <td>Encroachment</td>
+    <td id="colorgre">Encroachment</td>
     <td id="enc1"></td>
     <td ></td>
     <td ></td>
@@ -258,21 +274,21 @@
 <div class="table3">
 <table id="empSDG">
   <tr>
-    <th colspan="8">Employee-related SDGs</th>
+    <th id="colorblue" colspan="8">Employee-related SDGs</th>
   </tr>
   <tr>
     <th>Core ESG Issues</th>
     <th>Esg Scores</th>
-    <th>1 No poverty</th>
-    <th>2 Zero hunger</th>
-    <th>3 Good health and wellbeing</th>
-    <th>5 Gender equality</th>
-    <th>4 Quality education</th>
-    <th>8 Decent work and economic growth</th>
+    <th id="colornp">1 No poverty</th>
+    <th id="colorzh">2 Zero hunger</th>
+    <th id="colorghw">3 Good health and wellbeing</th>
+    <th id="colorge">5 Gender equality</th>
+    <th id="colorqe">4 Quality education</th>
+    <th id="colordweg">8 Decent work and economic growth</th>
   </tr>
   <tr>
 
-    <td>Governance</td>
+    <td id="colorpi">Governance</td>
     <td id="esge46a"></td>
     <td id="esge47a"></td>
     <td id="esge48a"></td>
@@ -283,7 +299,7 @@
   </tr>
   <tr>
 
-    <td>Employee wages</td>
+    <td id="colorblue">Employee wages</td>
     <td id="wages1"></td>
     <td id="wages2"></td>
     <td id="wages3"></td>
@@ -295,7 +311,7 @@
   </tr>
   <tr>
 
-    <td>Employee terms</td>
+    <td id="colorblue">Employee terms</td>
     <td id="terms1"></td>
     <td ></td>
     <td ></td>
@@ -305,7 +321,7 @@
     <td id="terms3"></td>
   </tr>
   <tr>
-    <td>Employee discrimination</td>
+    <td id="colorblue">Employee discrimination</td>
     <td id="disc1"></td>
     <td ></td>
     <td ></td>
@@ -316,7 +332,7 @@
   </tr>
   <tr>
 
-    <td>Employee health</td>
+    <td id="colorblue">Employee health</td>
     <td id="health1"></td>
     <td ></td>
     <td ></td>
@@ -341,20 +357,20 @@
 <div class="table4">
 <table id="socSDG">
   <tr>
-    <th colspan="8">Society-related SDGs</th>
+    <th id="colorb" colspan="8">Society-related SDGs</th>
   </tr>
   <tr>
     <th>Core ESG Issues</th>
     <th>Esg Scores</th>
-    <th>9 Industry innovation and infrastructure</th>
-    <th>10 Reduced inequalities</th>
-    <th>11 Sustainable cities and communities</th>
-    <th>16 Peace, justice and strong institutions</th>
-    <th>17 Patnerships for the goals</th>
+    <th id="coloriii">9 Industry innovation and infrastructure</th>
+    <th id="colorri">10 Reduced inequalities</th>
+    <th id="colorscc">11 Sustainable cities and communities</th>
+    <th id="colorpjsi">16 Peace, justice and strong institutions</th>
+    <th id="colorpg">17 Patnerships for the goals</th>
   </tr>
   <tr>
 
-    <td>Governance</td>
+    <td id="colorpi">Governance</td>
     <td id="esge53a"></td>
     <td id="esge54a"></td>
     <td id="esge55a"></td>
@@ -364,7 +380,7 @@
   </tr>
   <tr>
 
-    <td>Ethical practices</td>
+    <td id="colorb">Ethical practices</td>
     <td id="eprac1"></td>
     <td id="eprac2"></td>
     <td id="eprac3"></td>
@@ -402,6 +418,6 @@
 </nav>
 <script src="sdgscores.js" charset="utf-8"></script>
 <script src="discrimination.js" charset="utf-8"></script>
-
+<script src="charts1.js" charset="utf-8"></script>
 </body>
 </html>

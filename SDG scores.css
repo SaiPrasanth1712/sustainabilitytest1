@@ -47,7 +47,7 @@ h2{
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   background-color: whitesmoke;
-  width: 30%;
+  width: 100%;
 }
 
 #overallScores td, #overallScores th, #mappingESG td, #mappingESG th ,#empSDG td, #empSDG th , #socSDG td, #socSDG th{
@@ -62,11 +62,121 @@ h2{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
-  color: white;
+  background-color: whitesmoke;
+  color: black;
 }
 
 
 .pagination {
     justify-content:center;
+}
+
+.box {
+background-color:whitesmoke;
+  float: left;
+  width: 40%;
+  padding: 20px;
+}
+.box1{
+	background-color:whitesmoke;
+	float: left;
+	width: 60%;
+	padding: 60px;
+}
+
+#colornp{
+	background-color: rgba(255, 60, 40, 0.8);
+	color: whitesmoke;
+}
+#colorzh{
+	background-color: rgba(255, 150, 102, 0.8);
+}
+#colorghw{
+	background-color: rgba(69, 137, 37, 0.8);
+	color: whitesmoke;
+}
+#colorqe{
+	background-color: rgba(222, 6, 0, 0.8);
+	color: whitesmoke;
+}
+#colorge{
+	background-color: rgba(221, 93, 25, 0.8);
+	color: whitesmoke;
+}
+#colorcws{
+	background-color: rgba(157, 210, 204, 0.8);
+}
+#colorace{
+	background-color: rgba(255, 215, 125, 0.8);
+}
+#colordweg{
+	background-color: rgba(125, 54, 52, 0.8);
+	color: whitesmoke;
+}
+#coloriii{
+	background-color: rgba(255, 118, 33, 0.8);
+	color: whitesmoke;
+}
+#colorri{
+	background-color: rgba(210, 95, 151, 0.8);
+	color: whitesmoke;
+}
+#colorscc{
+	background-color: rgba(246, 182, 99, 0.8);
+}
+#colorrcp{
+	background-color: rgba(187, 150, 44, 0.8);
+	color: whitesmoke;
+}
+#colorca{
+	background-color: rgba(23, 109, 23, 0.8);
+	color: whitesmoke;
+}
+#colorlbw{
+	background-color: rgba(82, 197, 189, 0.8);
+}
+#colorlol{
+	background-color: rgba(96, 220, 129, 0.8);
+}
+#colorpjsi{
+	background-color: rgba(63, 124, 141, 0.8);
+	color: whitesmoke;
+}
+#colorpg{
+	background-color: rgba(26, 48, 91, 0.8);
+	color: whitesmoke;
+}
+#colorpi{
+	background-color: rgba(82, 35, 100, 0.4);
+	color: black;
+}
+#colorgre{
+	background-color: rgba(6, 102, 35, 0.3);
+}
+
+#esge11a, #esge40a,#esge41a,#esge42a,#esge43a,#esge44a,#esge45a,#energy1,#energy2,#ghg1,#ghg2,#ghg3,#ghg4,#water1,#water2,#procurement1,#procurement2,#nghg1,#nghg2,#nghg3,#nghg4,#waste1,#waste2,#waste3,#waste4,#enc1,#enc2,#enc3,#sdgg58b,#sdgh58b,#sdgi58b,#sdgj58b,#sdgk58b,#sdgl58b,#esge46a,#esge47a,#esge48a,#esge49a,#esge50a,#esge51a,#esge52a,#wages1,#wages2,#wages3,#wages4,#wages5,#wages6,#terms1,#terms2,#terms3,#disc1,#disc2,#health1,#health2,#sdgg67b,#sdgh67b,#sdgi67b,#sdgj67b,#sdgk67b,#sdgl67b,#esge53a,#esge54a,#esge55a,#esge56a,#esge57a,#esge58a,#eprac1,#eprac2,#eprac3,#eprac4,#eprac5,#eprac6,#sdgg73b,#sdgh73b,#sdgi73b,#sdgj73b,#sdgk73b{
+	background-color: rgba(114, 114, 114, 0.15);
+}
+
+#colorblue{
+	background-color: rgba(39, 70, 132, 0.5);
+}
+
+#colorb{
+	background-color: rgba(3, 62, 90, 0.8);
+	color: whitesmoke;
+}
+#overallScores th.green{
+	background-color: rgba(6, 102, 35, 0.7);
+	color: whitesmoke;
+}
+
+#overallScores th.blue{
+	background-color: rgba(39, 70, 132, 0.7);
+	color: whitesmoke;
+}
+
+#overallScores th.dblue{
+	background-color: rgba(3, 62, 90, 0.7);
+	color: whitesmoke;
 }
